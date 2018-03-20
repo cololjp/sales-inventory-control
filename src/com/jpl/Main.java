@@ -6,7 +6,7 @@ import com.jpl.view.Menu;
 
 import java.util.Scanner;
 
-public class Main {
+class Main {
 
     private static Model model = new Model();
     private static Controller controller = new Controller(model);
@@ -19,7 +19,7 @@ public class Main {
 
         scanner.close();
 
-        //System.out.println("Adding a line for testing Git.");
+        System.out.println("Adding a line to test VCS and GitHub integration with IntelliJ.");
     }
 
 }
