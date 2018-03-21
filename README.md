@@ -10,4 +10,3 @@ Sales and payments reports, and a bunch of other cool stuff.
 
 ## How to contribute
 Nothing here for the moment
-\
