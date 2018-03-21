@@ -7,3 +7,7 @@ Sales and payments reports, and a bunch of other cool stuff.
 - Client list
 - Customers list
 - Purchases report
+
+## How to contribute
+Nothing here for the moment
+\ No newline at the end
