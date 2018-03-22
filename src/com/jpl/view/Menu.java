@@ -55,6 +55,7 @@ public class Menu {
         System.out.println("1. NEW SALE");
         System.out.println("2. NEW PAYMENT");
         System.out.println("3. PRINT SALES");
+        System.out.println("4. PRINT PAYMENTS");
         System.out.println("0. EXIT");
 
         System.out.print("\nSelection: ");

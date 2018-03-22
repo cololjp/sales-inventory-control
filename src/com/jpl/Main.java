@@ -18,8 +18,6 @@ class Main {
         menu.start(scanner);
 
         scanner.close();
-
-        System.out.println("Adding a line to test VCS and GitHub integration with IntelliJ.");
     }
 
 }
