@@ -1,13 +1,18 @@
 package com.jpl.control;
 
 import com.jpl.model.*;
+import com.jpl.view.Menu;
 
 public class Controller {
 
     private Model model;
+    private Menu menu;
 
-    public Controller(Model model) {
+    public Controller(Model model, Menu menu) {
+
         this.model = model;
+        this.menu = menu;
+
     }
 
     public void addSale(String type, int amount) {
@@ -24,6 +29,10 @@ public class Controller {
 
     public void printPayments() {
         model.printPayments();
+    }
+
+    public void displayView() {
+        menu.start();
     }
 
 }

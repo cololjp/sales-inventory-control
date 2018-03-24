@@ -7,41 +7,41 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private String selection = "";
-    private int amount;
     private Controller controller;
+    private Scanner reader;
 
     public Menu(Controller controller) {
+
         this.controller = controller;
+        this.reader = new Scanner(System.in);
+
     }
 
-    public void start(Scanner scanner) {
+    public void start() {
+
+        String selection = "";
 
         while (!selection.equals("0")) {
 
             startMenu();
 
-            selection = scanner.next();
+            selection = reader.next();
 
             switch (selection) {
                 case "1":
-                    optionOne(scanner);
-
+                    optionOne(reader);
                     break;
 
                 case "2":
-                    optionTwo(scanner);
-
+                    optionTwo(reader);
                     break;
 
                 case "3":
-                    optionThree(scanner);
-
+                    optionThree(reader);
                     break;
 
                 case "4":
-                    optionFour(scanner);
-
+                    optionFour(reader);
                     break;
 
                 case "0":
@@ -49,13 +49,13 @@ public class Menu {
 
                 default:
                     notValidSelection();
-
                     break;
             }
         }
     }
 
     private void startMenu() {
+
         System.out.println("\t\tMENU\n");
         System.out.println("1. NEW SALE");
         System.out.println("2. NEW PAYMENT");
@@ -64,34 +64,43 @@ public class Menu {
         System.out.println("0. EXIT");
 
         System.out.print("\nSelection: ");
+
     }
 
-    private void optionOne(Scanner scanner) {
+    private void optionOne(Scanner reader) {
+
+        int amount;
+
         System.out.print("\nAmount: ");
-        amount = scanner.nextInt();
+        amount = reader.nextInt();
 
         controller.addSale("Normal", amount);
 
         clearScreen();
+
     }
 
-    private void optionTwo(Scanner scanner) {
+    private void optionTwo(Scanner reader) {
+
         String distributor;
+        int amount;
 
         System.out.print("\nDistributor: ");
-        distributor = scanner.next();
+        distributor = reader.next();
 
         System.out.print("\nAmount: ");
-        amount = scanner.nextInt();
+        amount = reader.nextInt();
 
         controller.addPayment(distributor, amount);
 
         clearScreen();
+
     }
 
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     private void optionThree(Scanner scanner) {
+
         clearScreen();
 
         controller.printSales();
@@ -105,10 +114,12 @@ public class Menu {
         }
 
         clearScreen();
+
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     private void optionFour(Scanner scanner) {
+
         clearScreen();
 
         controller.printPayments();
@@ -122,17 +133,22 @@ public class Menu {
         }
 
         clearScreen();
+
     }
 
     private void notValidSelection() {
+
         System.out.println("Not a valid option.");
         System.out.println("Try again.");
+
     }
 
     private void clearScreen() {
+
         for (int i = 0; i < 13; i++) {
             System.out.println();
         }
+
     }
 
 }
