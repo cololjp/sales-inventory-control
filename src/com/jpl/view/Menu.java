@@ -45,6 +45,7 @@ public class Menu {
                     break;
 
                 case "0":
+                    reader.close();
                     break;
 
                 default:

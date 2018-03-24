@@ -8,16 +8,15 @@ import java.util.Scanner;
 
 class Main {
 
-    private static Model model = new Model();
-    private static Controller controller = new Controller(model);
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
+        Model model = new Model();
+        Controller controller = new Controller();
         Menu menu = new Menu(controller);
 
-        menu.start(scanner);
+        controller.initialize(model, menu);
+        controller.displayView();
 
-        scanner.close();
     }
 
 }

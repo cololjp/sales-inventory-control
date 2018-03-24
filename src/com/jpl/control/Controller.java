@@ -8,7 +8,7 @@ public class Controller {
     private Model model;
     private Menu menu;
 
-    public Controller(Model model, Menu menu) {
+    public void initialize(Model model, Menu menu) {
 
         this.model = model;
         this.menu = menu;
