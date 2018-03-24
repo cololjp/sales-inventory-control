@@ -4,12 +4,10 @@ public class Sale {
 
     private double amount;
     private String type;
-    //private String colour;
 
     public Sale(float amount) {
         this.type = "Normal";
         this.amount = amount;
-        //this.colour = "white";
     }
 
     public Sale(String type, float amount) {
@@ -32,10 +30,6 @@ public class Sale {
     public void setType(String type) {
         this.type = type;
     }
-
-    //public void setColour(String colour) {
-    //    this.colour = colour;
-    //}
 
     @Override
     public String toString() {

@@ -21,15 +21,19 @@ public class Model {
     }
 
     public void printSales() {
+
         for (Sale i : sales) {
             System.out.println(i);
         }
+
     }
 
     public void printPayments() {
+
         for (Payment i : payments) {
             System.out.println(i);
         }
+
     }
 
 }

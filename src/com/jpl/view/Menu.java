@@ -39,6 +39,11 @@ public class Menu {
 
                     break;
 
+                case "4":
+                    optionFour(scanner);
+
+                    break;
+
                 case "0":
                     break;
 
@@ -84,12 +89,32 @@ public class Menu {
         clearScreen();
     }
 
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void optionThree(Scanner scanner) {
         clearScreen();
 
         controller.printSales();
 
         System.out.print("\nPress Enter to continue...");
+
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        clearScreen();
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    private void optionFour(Scanner scanner) {
+        clearScreen();
+
+        controller.printPayments();
+
+        System.out.print("\nPress Enter to continue...");
+
         try {
             System.in.read();
         } catch (IOException e) {
