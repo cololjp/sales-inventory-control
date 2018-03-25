@@ -2,7 +2,7 @@ package com.jpl.model;
 
 public class Payment {
 
-    private int amount;
+    private double amount;
     private String distributor;
 
     public Payment(String distributor, int amount) {
@@ -10,7 +10,7 @@ public class Payment {
         this.distributor = distributor;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
