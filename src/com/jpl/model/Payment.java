@@ -5,7 +5,7 @@ public class Payment {
     private double amount;
     private String distributor;
 
-    public Payment(String distributor, int amount) {
+    public Payment(String distributor, double amount) {
         this.amount = amount;
         this.distributor = distributor;
     }

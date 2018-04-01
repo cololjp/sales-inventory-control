@@ -15,11 +15,11 @@ public class Controller {
 
     }
 
-    public void addSale(String type, int amount) {
+    public void addSale(String type, double amount) {
         model.addSale(new Sale(type, amount));
     }
 
-    public void addPayment(String distributor, int amount) {
+    public void addPayment(String distributor, double amount) {
         model.addPayment(new Payment(distributor, amount));
     }
 

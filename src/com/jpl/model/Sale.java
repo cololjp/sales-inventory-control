@@ -1,16 +1,11 @@
 package com.jpl.model;
 
-public class Sale {
+public class Sale implements Comparable<Sale> {
 
     private double amount;
     private String type;
 
-    public Sale(float amount) {
-        this.type = "Normal";
-        this.amount = amount;
-    }
-
-    public Sale(String type, float amount) {
+    public Sale(String type, double amount) {
         this.type = type;
         this.amount = amount;
     }
@@ -34,5 +29,18 @@ public class Sale {
     @Override
     public String toString() {
         return "Type: " + type + " - Amount: " + amount;
+    }
+
+    @Override
+    public int compareTo(Sale compareSale) {
+
+        // Ascending order comparison
+        int result = (int) (this.amount - compareSale.amount);
+
+        // Descending order comparison
+        // int result = (int) (this.amount - compareSale.amount);
+
+        return result;
+
     }
 }

@@ -70,12 +70,16 @@ public class Menu {
 
     private void optionOne(Scanner reader) {
 
-        int amount;
+        String type;
+        double amount;
+
+        System.out.print("\nType -> N/Normal - C/Credit Card: ");
+        type = reader.next();
 
         System.out.print("\nAmount: ");
-        amount = reader.nextInt();
+        amount = reader.nextDouble();
 
-        controller.addSale("Normal", amount);
+        controller.addSale(type, amount);
 
         clearScreen();
 
@@ -84,13 +88,13 @@ public class Menu {
     private void optionTwo(Scanner reader) {
 
         String distributor;
-        int amount;
+        double amount;
 
         System.out.print("\nDistributor: ");
         distributor = reader.next();
 
         System.out.print("\nAmount: ");
-        amount = reader.nextInt();
+        amount = reader.nextDouble();
 
         controller.addPayment(distributor, amount);
 
