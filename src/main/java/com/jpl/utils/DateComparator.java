@@ -1,7 +1,5 @@
 package com.jpl.utils;
 
-import com.jpl.model.Sale;
-
 import java.util.Comparator;
 
 public class DateComparator implements Comparator  {
